@@ -13,6 +13,8 @@
 		2F2E01D1215FB24C0069DB68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E01D0215FB24C0069DB68 /* Assets.xcassets */; };
 		2F2E01D4215FB24C0069DB68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E01D2215FB24C0069DB68 /* LaunchScreen.storyboard */; };
 		2F2E01D7215FB24C0069DB68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E01D6215FB24C0069DB68 /* main.m */; };
+		2F2E01EC215FCA810069DB68 /* ZSDeviceToolsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E01EB215FCA810069DB68 /* ZSDeviceToolsManager.m */; };
+		2F2E01EF215FD6980069DB68 /* ZSDeviceHardwareMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E01EE215FD6980069DB68 /* ZSDeviceHardwareMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		2F2E01D3215FB24C0069DB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F2E01D5215FB24C0069DB68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F2E01D6215FB24C0069DB68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2F2E01EA215FCA810069DB68 /* ZSDeviceToolsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSDeviceToolsManager.h; sourceTree = "<group>"; };
+		2F2E01EB215FCA810069DB68 /* ZSDeviceToolsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSDeviceToolsManager.m; sourceTree = "<group>"; };
+		2F2E01ED215FD6980069DB68 /* ZSDeviceHardwareMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSDeviceHardwareMessage.h; sourceTree = "<group>"; };
+		2F2E01EE215FD6980069DB68 /* ZSDeviceHardwareMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSDeviceHardwareMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +64,117 @@
 		2F2E01C6215FB24A0069DB68 /* ZSArchitecture */ = {
 			isa = PBXGroup;
 			children = (
-				2F2E01C7215FB24A0069DB68 /* AppDelegate.h */,
-				2F2E01C8215FB24A0069DB68 /* AppDelegate.m */,
-				2F2E01CA215FB24A0069DB68 /* ViewController.h */,
-				2F2E01CB215FB24A0069DB68 /* ViewController.m */,
-				2F2E01CD215FB24A0069DB68 /* Main.storyboard */,
+				2F2E01E3215FC4060069DB68 /* CommonComponent  */,
+				2F2E01DE215FC24F0069DB68 /* CommonTools */,
+				2F2E01DD215FC06A0069DB68 /* AppInit */,
 				2F2E01D0215FB24C0069DB68 /* Assets.xcassets */,
 				2F2E01D2215FB24C0069DB68 /* LaunchScreen.storyboard */,
+				2F2E01CD215FB24A0069DB68 /* Main.storyboard */,
 				2F2E01D5215FB24C0069DB68 /* Info.plist */,
 				2F2E01D6215FB24C0069DB68 /* main.m */,
 			);
 			path = ZSArchitecture;
+			sourceTree = "<group>";
+		};
+		2F2E01DD215FC06A0069DB68 /* AppInit */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E01C7215FB24A0069DB68 /* AppDelegate.h */,
+				2F2E01C8215FB24A0069DB68 /* AppDelegate.m */,
+				2F2E01CA215FB24A0069DB68 /* ViewController.h */,
+				2F2E01CB215FB24A0069DB68 /* ViewController.m */,
+			);
+			path = AppInit;
+			sourceTree = "<group>";
+		};
+		2F2E01DE215FC24F0069DB68 /* CommonTools */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E01E7215FC9E10069DB68 /* DeviceTools */,
+				2F2E01E2215FC35A0069DB68 /* ImageTools */,
+				2F2E01E0215FC2CB0069DB68 /* String&CharTools */,
+				2F2E01DF215FC2BC0069DB68 /* FilesTools */,
+			);
+			path = CommonTools;
+			sourceTree = "<group>";
+		};
+		2F2E01DF215FC2BC0069DB68 /* FilesTools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FilesTools;
+			sourceTree = "<group>";
+		};
+		2F2E01E0215FC2CB0069DB68 /* String&CharTools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "String&CharTools";
+			sourceTree = "<group>";
+		};
+		2F2E01E2215FC35A0069DB68 /* ImageTools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageTools;
+			sourceTree = "<group>";
+		};
+		2F2E01E3215FC4060069DB68 /* CommonComponent  */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E01E6215FC9150069DB68 /* CacheComponent */,
+				2F2E01E5215FC4CC0069DB68 /* NetWorkingComponent */,
+				2F2E01E4215FC48D0069DB68 /* LocationComponent  */,
+			);
+			path = "CommonComponent ";
+			sourceTree = "<group>";
+		};
+		2F2E01E4215FC48D0069DB68 /* LocationComponent  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "LocationComponent ";
+			sourceTree = "<group>";
+		};
+		2F2E01E5215FC4CC0069DB68 /* NetWorkingComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWorkingComponent;
+			sourceTree = "<group>";
+		};
+		2F2E01E6215FC9150069DB68 /* CacheComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CacheComponent;
+			sourceTree = "<group>";
+		};
+		2F2E01E7215FC9E10069DB68 /* DeviceTools */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E01E8215FCA190069DB68 /* DeviceManager */,
+				2F2E01E9215FCA3C0069DB68 /* DeviceBaseMessage */,
+			);
+			path = DeviceTools;
+			sourceTree = "<group>";
+		};
+		2F2E01E8215FCA190069DB68 /* DeviceManager */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E01EA215FCA810069DB68 /* ZSDeviceToolsManager.h */,
+				2F2E01EB215FCA810069DB68 /* ZSDeviceToolsManager.m */,
+			);
+			path = DeviceManager;
+			sourceTree = "<group>";
+		};
+		2F2E01E9215FCA3C0069DB68 /* DeviceBaseMessage */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E01ED215FD6980069DB68 /* ZSDeviceHardwareMessage.h */,
+				2F2E01EE215FD6980069DB68 /* ZSDeviceHardwareMessage.m */,
+			);
+			path = DeviceBaseMessage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +248,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2E01CC215FB24A0069DB68 /* ViewController.m in Sources */,
+				2F2E01EF215FD6980069DB68 /* ZSDeviceHardwareMessage.m in Sources */,
 				2F2E01D7215FB24C0069DB68 /* main.m in Sources */,
+				2F2E01EC215FCA810069DB68 /* ZSDeviceToolsManager.m in Sources */,
 				2F2E01C9215FB24A0069DB68 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
