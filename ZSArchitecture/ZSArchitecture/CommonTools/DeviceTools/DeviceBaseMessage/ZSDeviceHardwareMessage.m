@@ -24,12 +24,11 @@
               device.localizedModel,
               device.systemName,
               device.systemVersion,
-              device.identifierForVendor,
+              device.identifierForVendor,//6s 1B66602B-CCCF-4193-AD70-CA0E67F2DEF1 (APP写卸载之后就变了)
               (long)device.batteryState,
-               device.batteryLevel,
-               device.batteryMonitoringEnabled,
-               device.multitaskingSupported);
-        
+              device.batteryLevel,
+              device.batteryMonitoringEnabled,
+              device.multitaskingSupported);
     }
     return self;
 }
