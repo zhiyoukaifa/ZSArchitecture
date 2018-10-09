@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/**zs20180929
+/**zs20180929 添加注释
   获取设备硬件信息
  */
 @interface ZSDeviceHardwareMessage : NSObject
